@@ -1,0 +1,26 @@
+
+#! encoding: UTF-8
+n=int(raw_input('Introduzca el número de subintervalos: '))
+j=0
+
+while (n>0) and (j==0):
+  j+=1
+  suma=0.0
+  pi=3.1415926535897931159979634685441852
+  for i in range(1,n+1):
+  
+    a= float (i-1.0)/n
+    b= float (i)/n
+    x_i= (i-0.5)/n
+    fx_i= ((4.0)/(1.0+x_i**2))
+    
+    print "El intervalo %d es: [%3.2f, %3.2f]" %(i,a,b)
+    print "El punto x_i es: %4.3f" %(x_i)
+    print "fx_i es: %6.5f" %(fx_i)
+ 
+    suma+= fx_i
+
+  aprox= suma/n					
+  print "La aproximación del número pi es: %12.11f" %aprox
+  print "El número pi con 35 decimales es: %36.35f" %pi
+
